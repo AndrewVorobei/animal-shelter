@@ -42,7 +42,7 @@ import footerComponent from "~/components/footerScreen/footerComponent.vue";
     .ourPets_footer {
         max-height: 350px;
         height: 100%;
-        background: url('@/assets/img-mobile/footer-screen/footer-bg.png') no-repeat center;
+        background: url('@/assets/img-mobile/footer-screen/footer-gradient-background.png') no-repeat center;
 
         @media (max-width: 768px) {
             height: 639px;

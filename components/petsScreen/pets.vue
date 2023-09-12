@@ -92,6 +92,15 @@ onBeforeUnmount(() => {
             <button :class="{ isActiveNext: !active_btn.isNextActive }" class="slider_btn" @click="next">
                 <img src="/arrows/arrow_next.svg" alt="arrow back">
             </button>
+            <div class="mobile_buttons">
+                <button :class="{ isActivePrev: !active_btn.isPrevActive }" class="mobile_btn" @click="prev">
+                    <img src="/arrows/arrow_prev.svg" alt="arrow back">
+                </button>
+                <button :class="{ isActiveNext: !active_btn.isNextActive }" class="mobile_btn" @click="next">
+                    <img src="/arrows/arrow_next.svg" alt="arrow back">
+                </button>
+
+            </div>
         </div>
         <button @click="toRest" class="pets_footer_btn">
             <span>Get to know the rest</span>
@@ -140,7 +149,8 @@ onBeforeUnmount(() => {
             gap: 90px;
         }
 
-        .slider_btn {
+        .slider_btn,
+        .mobile_btn {
             max-height: 52px;
             max-width: 52px;
             display: inline-flex;
@@ -156,6 +166,10 @@ onBeforeUnmount(() => {
                 border: 2px solid #F1CDB3;
                 background: rgba(253, 220, 196, 1);
             }
+        }
+
+        .mobile_btn {
+            display: none;
         }
 
         .isActiveNext,
@@ -226,21 +240,23 @@ onBeforeUnmount(() => {
         }
 
         .pets_slider {
-            flex-direction: column-reverse;
+            flex-direction: column;
 
-            .pets_block {
-                order: 1;
+            .mobile_buttons {
+                display: flex;
+                margin-top: 20px;
+                justify-content: center;
+                gap: 80px;
+
+
+
+                .mobile_btn {
+                    display: flex;
+                }
             }
 
-            &:first-child {
-                order: 2;
-                flex-direction: row;
-            }
-
-            &:last-child {
-                order: 3;
-                flex-direction: row;
-
+            .slider_btn {
+                display: none;
             }
         }
     }

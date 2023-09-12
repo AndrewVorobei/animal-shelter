@@ -30,6 +30,20 @@ const updateDisplayedPets = () => {
     }
 };
 
+const next = () => {
+    if (currentPetIndex.value < pets.value.length - displayedPetsCount.value) {
+        currentPetIndex.value++;
+        updateDisplayedPets();
+    }
+};
+
+const prev = () => {
+    if (currentPetIndex.value > 0) {
+        currentPetIndex.value--;
+        updateDisplayedPets();
+    }
+};
+
 onMounted(() => {
     window.addEventListener("resize", handleResize);
     updateDisplayedPets();
@@ -50,12 +64,12 @@ onBeforeUnmount(() => {
             </div>
         </div>
         <div class="ourPets_navigation">
-            <button class="pagination_btn">
+            <button class="pagination_btn" @click="prev">
                 <span>
                     &lt&lt
                 </span>
             </button>
-            <button class="pagination_btn ">
+            <button class="pagination_btn" @click="prev">
                 <span>
                     &lt
                 </span>
@@ -63,12 +77,12 @@ onBeforeUnmount(() => {
             <button class="pagination_btn">
                 {{ 1 }}
             </button>
-            <button class="pagination_btn">
+            <button class="pagination_btn" @click="next">
                 <span>
                     >
                 </span>
             </button>
-            <button class="pagination_btn">
+            <button class="pagination_btn" @click="next">
                 <span>
                     >>
                 </span>
@@ -141,6 +155,15 @@ onBeforeUnmount(() => {
                 line-height: 115%;
                 letter-spacing: 1.2px;
             }
+
+            &:nth-child(1),
+            &:nth-child(2) {
+                border: 2px solid $color-dark-s;
+
+                span {
+                    color: $color-dark-s;
+                }
+            }
         }
     }
 }
@@ -212,21 +235,7 @@ onBeforeUnmount(() => {
                     letter-spacing: 1.2px;
                 }
 
-                &:nth-child(1) {
-                    border: 2px solid $color-dark-s;
 
-                    span {
-                        color: $color-dark-s;
-                    }
-                }
-
-                &:nth-child(2) {
-                    border: 2px solid $color-dark-s;
-
-                    span {
-                        color: $color-dark-s;
-                    }
-                }
             }
 
 

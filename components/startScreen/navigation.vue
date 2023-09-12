@@ -237,7 +237,8 @@ const isOpen = ref(false);
                 background: $color-dark-3xl;
                 position: absolute;
                 top: 0;
-                left: 30%;
+                display: flex;
+                justify-self: center;
                 z-index: 1;
 
                 .sidemenu__wrapper {

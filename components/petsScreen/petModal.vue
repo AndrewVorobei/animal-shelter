@@ -152,7 +152,7 @@ const props = defineProps({
 
     }
 
-    @media (max-width:768px) {
+    @media (min-width:768px) and (max-width: 1280px) {
         .modal_block {
             max-width: 682px;
             max-height: 402px;
@@ -170,6 +170,44 @@ const props = defineProps({
                     .pet_name {
                         margin: 0;
                         margin-top: 10px;
+                    }
+
+                    .pet_description {
+                        margin-top: 20px;
+                        font-size: 13px;
+                        letter-spacing: 0.78px;
+                    }
+                }
+            }
+        }
+    }
+
+    @media (min-width: 320px) and (max-width: 768px) {
+        .modal_block {
+            max-width: 271px;
+            max-height: 393px;
+
+            .pet-modal {
+                max-width: 240px;
+                max-height: 341px;
+
+                img {
+                    display: none;
+                }
+
+                .modal_content {
+                    margin: 10px;
+                    max-width: 220px;
+                    max-height: 321px;
+                    align-items: center;
+
+                    .pet_name {
+                        margin: 0;
+                    }
+
+                    .pet_breed {
+                        display: flex;
+                        text-wrap: nowrap;
                     }
 
                     .pet_description {

@@ -95,7 +95,7 @@ const scrollToFriends = () => {
 
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1280px) and (min-width: 768px) {
     .content_block {
         margin: 0;
         flex-direction: column;
@@ -117,6 +117,40 @@ const scrollToFriends = () => {
             margin: 100px 30px 0 169px;
             max-width: 569px;
             max-height: 593px;
+        }
+    }
+
+
+}
+
+@media (max-width: 768px) and (min-width: 320px) {
+    .content_block {
+        flex-direction: column;
+        margin: 60px 10px 0;
+        max-width: 300px;
+        max-height: 673px;
+        gap: 105px;
+
+        .content {
+            align-items: center;
+            padding: 0;
+            margin: 60px 10px 0;
+
+            .content_header {
+                font-size: 25px;
+                letter-spacing: 1.5px;
+                text-align: center;
+            }
+
+            .content_descr {
+                text-align: center;
+            }
+        }
+
+        img {
+            margin: 0 10px 0.23px 50px;
+            width: 260px;
+            height: 271.774px;
         }
     }
 }

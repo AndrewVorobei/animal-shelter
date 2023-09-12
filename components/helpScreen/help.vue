@@ -13,12 +13,7 @@ const icons = [
     { name: 'Sleeping areas', img: index_bottom.areas }
 ];
 
-// const icons_bottom = [
-//     { name: 'Vitamins', img: index_bottom.vitamins },
-//     { name: 'Medicines', img: index_bottom.medicines },
-//     { name: 'Collars/leashes', img: index_bottom.collars },
-//     { name: 'Sleeping areas', img: index_bottom.areas }
-// ];
+
 </script>
 
 <template>
@@ -36,14 +31,7 @@ const icons = [
                     </span>
                 </div>
             </div>
-            <!-- <div class="icons_bottom">
-                <div class="icon" v-for="el in icons_bottom" :key="el">
-                    <img :src="el.img" alt="icon">
-                    <span class="icon_top">
-                        {{ el.name }}
-                    </span>
-                </div>
-            </div> -->
+
         </div>
     </div>
 </template>
@@ -72,7 +60,6 @@ const icons = [
         font-style: normal;
         font-weight: 400;
         line-height: 130%;
-        /* 45.5px */
         letter-spacing: 2.1px;
     }
 
@@ -82,18 +69,6 @@ const icons = [
         display: flex;
         width: 100%;
         height: 100%;
-
-        // .icons_top {
-        //     display: flex;
-        //     justify-content: space-between;
-
-        // }
-
-        // .icons_bottom {
-        //     display: flex;
-        //     justify-content: space-between;
-        //     margin-inline: 84px;
-        // }
 
         .icons {
             display: flex;
@@ -144,7 +119,7 @@ const icons = [
     }
 }
 
-@media (max-width:768px) {
+@media (max-width: 1280px) and (min-width: 768px) {
     .help_content {
         padding: 0;
         margin: 0;
@@ -165,6 +140,69 @@ const icons = [
                     max-width: 170px;
                     width: 170px;
                     height: 113px;
+
+                    span {
+                        text-align: center;
+                        font-size: 20px;
+                        letter-spacing: 1.2px;
+                        line-height: 115%;
+                    }
+
+                    &:nth-child(9) {
+                        margin-right: 0;
+                    }
+
+                    &:nth-child(6) {
+                        margin-left: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) and (min-width: 320px) {
+    .help_content {
+        max-width: 290px;
+        max-height: 661px;
+        height: 100%;
+        margin: 42px 15px;
+        gap: 42px;
+        padding: 0;
+
+        .help_header {
+            font-size: 25px;
+            letter-spacing: 1.5px;
+        }
+
+        .help_icons {
+            max-height: 555px;
+
+
+            .icons {
+                max-width: 290px;
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                column-gap: 30px;
+                row-gap: 30px;
+
+                .icon {
+                    max-width: 130px;
+                    width: 130px;
+                    height: 87px;
+                    gap: 20px;
+
+                    img {
+                        width: 50px;
+                        height: 50px;
+                    }
+
+                    span {
+                        text-align: center;
+                        font-size: 15px;
+                        letter-spacing: 0.9px;
+                        line-height: 110%;
+                    }
 
                     &:nth-child(9) {
                         margin-right: 0;

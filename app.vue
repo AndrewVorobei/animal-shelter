@@ -13,7 +13,7 @@ useHead({
 </template>
 
 <style lang="scss">
-@media (max-width: 1280px) {
+@media (min-width: 1280px) {
   .main_layout {
     max-width: 1280px;
     width: 100%;
@@ -21,9 +21,17 @@ useHead({
   }
 }
 
-@media (max-width:768px) {
+@media (min-width:768px) and (max-width: 1280px) {
   .main_layout {
     max-width: 768px;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 768px) {
+  .main_layout {
+    max-width: 320px;
     width: 100%;
     height: 100%;
   }

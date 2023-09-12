@@ -1,0 +1,23 @@
+.component-fade-enter-active,
+.component-fade-leave-active {
+    transition: all 0.4s ease-in-out;
+}
+
+.component-fade-leave-from {
+    transform: translate(-100px);
+}
+
+.component-fade-enter-from {
+    opacity: 0;
+    transform: translate(100px);
+}
+
+.component-fade-enter-to {
+    opacity: 1;
+    transform: translate(-100px);
+}
+
+.component-fade-leave-to {
+    opacity: 0;
+    transform: translate(-100px);
+}

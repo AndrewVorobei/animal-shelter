@@ -6,6 +6,7 @@ import pets from "~/components/petsScreen/pets.vue"
 import help from "~/components/helpScreen/help.vue"
 import donation from '~/components/donationScreen/donation.vue'
 import footerComponent from "~/components/footerScreen/footerComponent.vue"
+
 </script>
 
 <template>
@@ -42,13 +43,17 @@ import footerComponent from "~/components/footerScreen/footerComponent.vue"
         height: 100%;
         background: url('@/assets/img/start-screen/bg.svg') no-repeat center;
 
-        @media (max-width: 768px) {
+        @media (max-width: 1280px) and (min-width: 768px) {
             flex-direction: column;
             align-items: center;
             width: 100%;
             max-height: 1165px;
             background: url('@/assets/img-mobile/start-screen/start-mobile-bg.png') no-repeat center;
+        }
 
+        @media (max-width: 768px) and (min-width: 320px) {
+            max-height: 823px;
+            background: url('@/assets/img-small/start-screen/start-screen-bg.png');
         }
     }
 
@@ -57,9 +62,12 @@ import footerComponent from "~/components/footerScreen/footerComponent.vue"
         height: 100%;
         background: $color-light-xl;
 
-        @media (max-width:768px) {
+        @media (min-width:768px) and (max-width: 1280px) {
             max-height: 1048px;
+        }
 
+        @media (max-width: 768px) and (min-width: 320px) {
+            max-height: 974px;
         }
     }
 
@@ -67,6 +75,10 @@ import footerComponent from "~/components/footerScreen/footerComponent.vue"
         max-height: 877px;
         height: 100%;
         background: $color-light-l;
+
+        @media (max-width: 768px) and (min-width: 320px) {
+            max-height: 791px;
+        }
     }
 
     .help {
@@ -74,8 +86,13 @@ import footerComponent from "~/components/footerScreen/footerComponent.vue"
         height: 100%;
         background: $color-light-xl;
 
-        @media (max-width:768px) {
+        @media (max-width: 1280px) and (min-width: 768px) {
             max-height: 779px;
+            height: 100%;
+        }
+
+        @media (max-width: 768px) and (min-width: 320px) {
+            max-height: 745px;
             height: 100%;
         }
     }
@@ -85,9 +102,12 @@ import footerComponent from "~/components/footerScreen/footerComponent.vue"
         height: 100%;
         background: $color-light-l;
 
-        @media (max-width:768px) {
+        @media (min-width:768px) and (max-width: 1280px) {
             max-height: 783px;
-            height: 100%;
+        }
+
+        @media (max-width: 768px) and (min-width: 320px) {
+            max-height: 542.2px;
         }
     }
 
@@ -96,10 +116,16 @@ import footerComponent from "~/components/footerScreen/footerComponent.vue"
         height: 100%;
         background: url('@/assets/img/footer-screen/footer-bg.png') no-repeat center;
 
-        @media (max-width:768px) {
+        @media (min-width:768px) and (max-width: 1280px) {
             max-height: 639px;
             height: 639px;
             background: url('@/assets/img-mobile/footer-screen/footer-gradient-background.png') no-repeat;
+        }
+
+        @media (max-width: 768px) and (min-width: 320px) {
+            max-height: 809px;
+            height: 809px;
+            background: url('@/assets/img-small/footer-screen/footer-gradient-background.png') no-repeat;
         }
     }
 }

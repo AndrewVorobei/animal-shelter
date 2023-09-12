@@ -93,7 +93,7 @@
 }
 
 
-@media (max-width:768px) {
+@media (max-width: 1280px) and (min-width: 768px) {
     .donation_block {
         max-height: 603px;
         max-width: 505px;
@@ -106,6 +106,58 @@
             .credit_card {
                 max-width: 349px;
             }
+        }
+    }
+}
+
+@media (max-width: 768px) and (min-width: 320px) {
+    .donation_block {
+        max-width: 300px;
+        max-height: 458px;
+        flex-direction: column-reverse;
+        margin: 42px 10px;
+        align-items: center;
+
+        .donation_content {
+            max-width: 300px;
+            max-height: 281px;
+            align-items: center;
+
+            .donation_header {
+                text-align: center;
+                font-size: 25px;
+                letter-spacing: 1.5px;
+            }
+
+            .subheading {
+                line-height: 160%;
+                letter-spacing: 0;
+            }
+
+            .credit_card {
+                max-width: 281px;
+
+                img {
+                    width: 30px;
+                    height: 23px;
+                }
+
+                .card_number {
+                    font-size: 15px;
+                    line-height: 110%;
+                    letter-spacing: 0.9px;
+                }
+
+                .donation_information {
+                    text-align: justify;
+                    max-width: 280px;
+                }
+            }
+        }
+
+        img {
+            width: 260px;
+            height: 135.2px;
         }
     }
 }
